@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Resume Builder Form</h1>
+    <form id="resumeForm" onsubmit="submitForm(event)">
+        <div class="form-section">
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="Janani P">
+            <label>Preferred Pronouns:</label>
+            <input type="text" name="preferred_pronouns" placeholder="She/Her">
+            <label>Role:</label>
+            <input type="text" name="role" required placeholder="Quality Analyst">
+            <label>Summary:</label>
+            <textarea name="summary" required placeholder="Enter a detailed summary..."></textarea>
+        </div>
+
+        <div id="thoughtworks_experiences" class="experiences">
+            <h3>ThoughtWorks Experiences</h3>
+            <button type="button" onclick="addExperience('thoughtworks_experiences')">Add Experience</button>
+        </div>
+
+        <div id="other_experiences" class="experiences">
+            <h3>Other Experiences</h3>
+            <button type="button" onclick="addExperience('other_experiences')">Add Experience</button>
+        </div>
+
+        <div id="skills" class="skills">
+            <h3>Skills</h3>
+            <button type="button" onclick="addSkill()">Add Skill</button>
+        </div>
+
+        <button type="submit">Submit Resume</button>
+    </form>
+
+    <div id="pdfPreviewContainer">
+        <h2>Resume Preview</h2>
+        <iframe id="pdfPreview" style="width:100%; height:500px;"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
