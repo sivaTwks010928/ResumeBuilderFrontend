@@ -76,7 +76,7 @@ function submitForm(event) {
         data.skills.push(skillData);
     });
 
-    fetch('http://13.201.6.41/check/api/resumes/generate-pdf/', {
+    fetch('http://13.234.136.102/check/api/resumes/generate-pdf/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
